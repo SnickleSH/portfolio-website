@@ -170,6 +170,12 @@ section{
     height: 80vh;
 }
 
+#profile .arrow{
+    position: absolute;
+    right: 5rem;
+    bottom: 2.5rem;
+}
+
 .section__pic-container{
     display: flex;
     height: 450px;
@@ -286,7 +292,7 @@ section{
     position: relative;
 }
 
-.about-containers{
+.about-containers{    
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
@@ -376,6 +382,13 @@ article .icon{
     position: relative;
 }
 
+#projects .about-containers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Define grid columns */
+    justify-content: center;
+    gap: 1rem;
+}
+
 .details-container {
     display: flex;
     flex-direction: column;
@@ -390,7 +403,7 @@ article .icon{
 
 #projects .article-container {
     display: flex;
-    justify-content: center; /* Center the image horizontally */
+    justify-content: center;
     width: 100%;
 }
 
