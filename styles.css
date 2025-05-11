@@ -159,6 +159,12 @@ section{
 
 .section-container{
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
 }
 
 /* PROFILE SECTION */
@@ -177,16 +183,19 @@ section{
 }
 
 .section__pic-container{
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
     display: flex;
-    height: 450px;
-    width: 450px;
-    margin: auto 0;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
 }
 
 #profile .section__pic-container:first-of-type {
     display: flex;
-    height: 500px; /* Increase the height */
-    width: 500px;  /* Increase the width */
+    height: 400px; /* Increase the height */
+    width: 400px;  /* Increase the width */
     margin: auto 0;
     transform: translateX(-20px); /* Move it to the left */
     border-radius: 50%; /* Make it circular */
@@ -293,22 +302,24 @@ section{
 }
 
 .about-containers{    
+    display: flex;
+    flex-direction: row;
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    width: 100%;
 }
 
 .about-details-container{
-    justify-content: center;
-    flex-direction: column;
-}
-
-.about-containers, .about-details-container{
     display: flex;
+    flex-direction: column;
+    flex: 2;
+    min-width: 300px;
 }
 
 .about-pic{
     border-radius: 2rem;
+    height: 300px;
 }
 
 .arrow{
@@ -318,8 +329,10 @@ section{
 }
 
 .details-container{
+    flex: 1 1 0;
+    min-width: 250px;
+    max-width: 400px;
     padding: 1.5rem;
-    flex: 1;
     background: white;
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
@@ -327,15 +340,9 @@ section{
     text-align: center;
 }
 
-.section-container{
-    gap: 4rem;
-    height: 80%;
-}
-
-.section__pic-container{
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
+.text-container {
+    margin-top: 1rem;
+    width: 100%;
 }
 
 /* EXPERIENCE SECTION */
@@ -374,6 +381,32 @@ article{
 
 article .icon{
     cursor: default;
+}
+
+/* Additional styling for experience boxes */
+.experience-box {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.experience-box h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.experience-box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.experience-box ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
 }
 
 /* PROJECTS SECTION */
